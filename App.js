@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, Image} from 'react-native';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -15,17 +15,23 @@ const instructions = Platform.select({
     'Double tap R on your keyboard to reload,\n' +
     'Shake or press menu button for dev menu',
 });
-
 type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-        <Text style={styles.instructions}>{instructions}</Text>
-        <Text style={styles.welcome}>Halo, Raihan Athaya Fawwaz</Text>
-        <Text style={styles.instructions}>Kelasmu XI RPL 3</Text>
-        <Text style={styles.instructions}>Absenmu 32</Text>     
-      </View>
+          <View>
+            <Text style={styles.welcome}>Halo, Raihan Athaya Fawwaz</Text>
+            <Text style={styles.welcome}>Kelas : XI RPL 3</Text>
+            <Text style={styles.welcome}>Absen : 32</Text>
+            <Image
+            style={{width: undefined, height: undefined, flex : 1}}
+            resizeMode="contain"
+            source = {{uri : 'https://avatars1.githubusercontent.com/u/39233484?s=400&u=931e7c5176bd5379eb1c96d89c92b9ef3dcbca54&v=4'}}
+            
+            />
+          </View>
+       </View>
     );
   }
 }
