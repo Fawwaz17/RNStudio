@@ -8,6 +8,7 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Image} from 'react-native';
+import Judul from './Components/Judul';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -20,17 +21,16 @@ export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-          <View>
-            <Text style={styles.welcome}>Halo, Raihan Athaya Fawwaz</Text>
-            <Text style={styles.welcome}>Kelas : XI RPL 3</Text>
-            <Text style={styles.welcome}>Absen : 32</Text>
-            <Image
-            style={{width: undefined, height: undefined, flex : 1}}
+            <Judul></Judul>
+          	 <Text style={styles.welcome}>Hallo Bro !</Text>
+          	 <Image
+            style={{ width: 240, height: 240}}
             resizeMode="contain"
-            source = {{uri : 'https://avatars1.githubusercontent.com/u/39233484?s=400&u=931e7c5176bd5379eb1c96d89c92b9ef3dcbca54&v=4'}}
-            
+            source = {require('/app/IMG_4715~3.jpg')}
             />
-          </View>
+            <Text >Nama : Raihan Athaya Fawwaz</Text>
+            <Text >Kelas : XI RPL 3</Text>
+            <Text >Absen : 32</Text>
        </View>
     );
   }
