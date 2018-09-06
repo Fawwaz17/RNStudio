@@ -1,28 +1,14 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- * @flow
- */
-
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Image} from 'react-native';
-import Judul from './Components/Judul';
+import Judul1 from './Components/Judul1';
 
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-type Props = {};
 export default class App extends Component<Props> {
   render() {
     return (
       <View style={styles.container}>
-            <Judul></Judul>
-          	 <Text style={styles.welcome}>Hallo Bro !</Text>
+            <Judul1 title="Biodata : "></Judul1>
+            <Judul1 title="Login : "></Judul1>
+          	 <Text style={styles.welcome}> Hallo Bro !</Text>
           	 <Image
             style={{ width: 240, height: 240}}
             resizeMode="contain"
@@ -37,6 +23,10 @@ export default class App extends Component<Props> {
 }
 
 const styles = StyleSheet.create({
+  wnputih : {
+      color : "#FFFFFF", 
+      textAlign : 'left'
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
